@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Documentation - Me, my personal website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./techno.html">Technologies</a></li>
+                <li><a href="./about.html">About Me</a></li>
+                <li><a href="./documentation.html">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="threshold">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/kubernetes.svg" width="350" height="350">
+                        <div class="text">Kubernetes</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/argocd.png" width="350" height="350">
+                        <div class="text">ArgoCD</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/terraform.svg" width="350" height="350">
+                        <div class="text">Terraform</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/hashicorp-vault.png" width="350" height="350">
+                        <div class="text">Hashicorp Vault</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/openstack.png" width="350" height="350">
+                        <div class="text">OpenStack</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/gitlab.svg" width="350" height="350">
+                        <div class="text">GitLab</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/docker.png" width="350" height="350">
+                        <div class="text">Docker</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/ansible.png" width="350" height="350">
+                        <div class="text">Ansible</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function showText(element) {
+            element.getElementsByClassName("text")[0].style.display = "block";
+            element.getElementsByTagName("img")[0].style.opacity = 0.2;
+        }
+        function hideText(element) {
+            element.getElementsByClassName("text")[0].style.display = "none";
+            element.getElementsByTagName("img")[0].style.opacity = 1;
+        }
+    </script>
+
