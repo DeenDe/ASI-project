@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Documentation - Me, my personal website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./techno.html">Technologies</a></li>
+                <li><a href="./about.html">About Me</a></li>
+                <li><a href="./documentation.html">Documentation</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="threshold">
+            <div class="flex-container">
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/kubernetes.png" width="350" height="350" alt="Kubernetes logo">
+                        <div class="text"><!-- Kubernetes --> Kubernetes is an open-source platform designed to automate deploying, scaling, and operating application containers.</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/argocd.png" width="350" height="350" alt="ArgoCD logo">
+                        <div class="text"><!-- ArgoCD --> ArgoCD is a declarative, GitOps continuous delivery tool for Kubernetes. It keeps your cluster in sync with your Git repository, ensuring a smooth and automated deployment process.</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/terraform.png" width="350" height="350" alt="Terraform logo">
+                        <div class="text"><!-- Terraform --> Terraform is an open-source infrastructure as code software tool created by HashiCorp. It allows users to define and provision data center infrastructure using a high-level configuration language known as HashiCorp Configuration Language (HCL), or optionally JSON.</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/hashicorp-vault.png" width="350" height="350" alt="Vault logo">
+                        <div class="text"><!-- Hashicorp Vault --> HashiCorp Vault secures, stores, and tightly controls access to tokens, passwords, certificates, API keys, and other secrets in modern computing.</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/openstack.png" width="350" height="350" alt="OpenStack logo">
+                        <div class="text"><div class="text-header">OpenStack</div><br><br>OpenStack is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service (IaaS), whereby virtual servers and other resources are made available to customers.</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/gitlab.png" width="350" height="350" alt="Gitlab logo">
+                        <div class="text"><!-- GitLab --> GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager providing wiki, issue-tracking, and continuous integration/continuous deployment pipeline features, using an open-source license.</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/docker.png" width="350" height="350" alt="Docker logo">
+                        <div class="text"><!-- Docker --> Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.</div>
+                    </div>
+                </div>
+                <div class="flex-item">
+                    <div class="hover-me" onmouseover="showText(this)" onmouseout="hideText(this)">
+                        <img src="images/ansible.png" width="350" height="350" alt="Ansible logo">
+                        <div class="text"><!-- Ansible --> Ansible is an open-source software provisioning, configuration management, and application-deployment tool.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function showText(element) {
+            element.getElementsByClassName("text")[0].style.display = "block";
+            element.getElementsByTagName("img")[0].style.opacity = 0.1;
+            element.getElementsByTagName("img")[0].style.transition = "opacity 0.5s ease-in-out";
+        }
+        function hideText(element) {
+            element.getElementsByClassName("text")[0].style.display = "none";
+            element.getElementsByTagName("img")[0].style.opacity = 1;
+            element.getElementsByTagName("img")[0].style.transition = "opacity 0.5s ease-in-out";
+        }
+    </script>
+</body>
+</html>

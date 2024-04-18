@@ -1,26 +1,41 @@
-
 body {
     background-color: #111;
     color: #eee;
+    font-family: sans-serif;
 }
-
+header {
+    background-color: #222;
+    padding: 10px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
 ul {
     list-style: none;
     display: flex;
     justify-content: center;
 }
-
 li {
     margin: 0 10px;
 }
-
 a {
     color: #aaa;
     text-decoration: none;
 }
-
 a:hover {
     color: #fff;
+}
+.text-box {
+    padding: 50px;
+}
+.text-description {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+}
+.name {
+    font-size: 50px;
 }
 
 h1, p {
@@ -42,14 +57,18 @@ h1 {
 
 .text {
     position: absolute;
+    font-size: 20px;
     top: 0;
     left: 0;
     right: 0;
     color: #fff;
     display: none;
-    background-color: rgba(0,0,0,0.4);
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.739);
+    padding: 5px;
     text-align: center;
+}
+.text-header {
+    font-size: 25px;
 }
 .flex-container {
     display: flex;
@@ -69,3 +88,7 @@ h1 {
     justify-content: center;
 }
 
+#visitorCount {
+    font-size: 250px;
+    font-weight: bold;
+}

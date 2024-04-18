@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atsi-project
+  namespace: atsi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atsi-project
+  template:
+    metadata:
+      labels:
+        app: atsi-project
+    spec:
+      containers:
+      - name: atsi-project
+        image: deende/atsi-project:1.0
+        ports:
+        - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: atsi-project-service
+  namespace: atsi
+spec:
+  selector:
+    app: atsi-project
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: atsi-project-ingress
+  namespace: atsi
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: atsi-project-service
+            port:
+              number: 3000
