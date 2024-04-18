@@ -9,7 +9,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a class="current-page" href="./index.html">Home</a></li>
                 <li><a href="./techno.html">Technologies</a></li>
                 <li><a href="./about.html">About Me</a></li>
                 <li><a href="./documentation.html">Documentation</a></li>
@@ -17,25 +17,22 @@
         </nav>
     </header>
     <main>
-        <h1>Introduction</h1>
+        <h1>Hello!</h1>
         <script>
-            // Function to increment visitor count when a new visitor arrives
             function incrementVisitorCount() {
                 fetch('/new-visitor')
                     .then(response => response.text())
                     .catch(error => console.error('Error incrementing visitor count:', error));
             }
-            // Check if user is a new visitor and increment count if so
             if (document.cookie.includes("visited=true")) {
                 console.log("Returning visitor");
             } else {
                 console.log("New visitor");
                 document.cookie = "visited=true; max-age=86400; path=/";
-                incrementVisitorCount(); // Call the function to increment the counter value
+                incrementVisitorCount();
             }
         </script>
         <script>
-            // Fetch visitor count when page loads
             fetch('/getVisitorCount')
                 .then(response => response.text())
                 .then(data => {
@@ -43,9 +40,8 @@
                 })
                 .catch(error => console.error('Error fetching visitor count:', error));
         </script>
-        <p>Hello, you are<br>
-            <span id="visitorCount"></span><br>
-        person that visited my page!</p>
+            <p><span id="visitorCount"></span><br>
+            people visited my page!</p>
     </main>
 </body>
 </html>

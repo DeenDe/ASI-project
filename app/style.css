@@ -37,6 +37,9 @@ a:hover {
 .name {
     font-size: 50px;
 }
+.current-page {
+    border-bottom: 2px solid #007bff;
+}
 
 h1, p {
     text-align: center;

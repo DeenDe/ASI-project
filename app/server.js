@@ -5,7 +5,6 @@ const { incrementCounter } = require('./counter.js');
 
 const PORT = process.env.PORT || 3000;
 
-// Function to handle requests for visitor count
 function handleVisitorCount(req, res) {
     fs.readFile('counter', 'utf8', (err, data) => {
         if (err) {
@@ -22,14 +21,14 @@ http.createServer((req, res) => {
     let filePath = '.' + req.url;
     
     if (filePath === './') {
-        filePath = './index.html'; // Serve index.html as default page
+        filePath = './index.html';
     }
     else if (req.url === '/getVisitorCount') {
-        handleVisitorCount(req, res); // Handle visitor count separately
-        return; // Stop execution of the rest of the code
+        handleVisitorCount(req, res);
+        return;
     }
     else if (req.url === '/new-visitor') {
-        incrementCounter(); // Increment counter for new visitor
+        incrementCounter();
         return;
     }
 

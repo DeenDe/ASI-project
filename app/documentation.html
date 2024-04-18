@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Documentation - Me, my personal website</title>
+    <title>Documentation - my personal website</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -12,8 +12,15 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./techno.html">Technologies</a></li>
                 <li><a href="./about.html">About Me</a></li>
-                <li><a href="./documentation.html">Documentation</a></li>
+                <li><a class="current-page" href="./documentation.html">Documentation</a></li>
             </ul>
         </nav>
     </header>
-
+    <div class="text-box">
+        <h1 class="name">Documentation</h1>
+        <p class="text-description">This website is a personal project, built by me using HTML, CSS, and a bit of JavaScript. It is hosted on a Kubernetes cluster, using a container orchestration platform called Kubernetes.</p>
+        <p class="text-description">The website is powered by a server side script written in Python. The script is quite simple - it just counts the number of unique visitors to the website, and stores that data in a file. The script uses cookies to track whether a user has been to the website before or not. If the user has not been to the website before, the script will increment the number of unique visitors. The script is deployed on a Kubernetes cluster, using a tool called ArgoCD. ArgoCD is a continuous deployment tool for Kubernetes, which automates the deployment of applications to Kubernetes.</p>
+        <p class="text-description">The website is also hosted on a container orchestration platform called Kubernetes. Kubernetes is a popular container orchestration platform, which allows you to easily deploy, manage, and scale containerized applications. The website is containerized as a Docker container, and is deployed to Kubernetes using a tool called Helm. Helm is a package manager for Kubernetes, which allows you to easily install, upgrade, and manage applications on Kubernetes.</p>
+    </div>
+</body>
+</html>
